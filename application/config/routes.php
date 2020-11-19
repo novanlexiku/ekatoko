@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -49,6 +49,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+// Router 
+$route['dashboard'] = 'admin/dashboard';
+$route['logout'] = 'auth/logout';
+$route['pengguna'] = 'admin/pengguna';
+$route['kategori'] = 'admin/kategori';
+$route['bank'] = 'admin/bank';
+$route['barang'] = 'admin/barang';
+$route['daftartutorial'] = 'admin/tutorial';
+$route['daftarstaff'] = 'admin/staff';
+$route['pemesanan'] = 'admin/pemesanan';
+$route['pengiriman'] = 'admin/pengiriman';
+$route['promo'] = 'admin/hotdeals';
+$route['laporan'] = 'admin/laporan';
+
+$route['aksesoris'] = 'home/aksesoris';
+$route['kamera'] = 'home/kamera';
+$route['overview'] = 'home/overview';
+$route['pemesanan_pelanggan'] = 'cart/pemesanan';
+$route['register'] = 'Register';
+$route['login'] = 'login';
+$route['logout'] = 'login/logout';
+
+$route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
