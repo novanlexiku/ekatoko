@@ -33,7 +33,7 @@ class Home extends CI_Controller
     public function index()
     {
         $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+            'title' => 'EKA Toko - Ponjong'
         );
         $data = array(
             'data' =>    $this->m_barang->tampil_promo()
@@ -43,36 +43,11 @@ class Home extends CI_Controller
         $this->load->view('front/home_view', $data);
     }
 
-    function aksesoris()
-    {
-        $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
-        );
-        $data = array(
-            'data' =>    $this->m_barang->tampil_aksesoris()
-        );
-
-        $this->load->view('shared/frontheader', $title);
-        $this->load->view('front/aksesoris_view', $data);
-    }
-
-    function kamera()
-    {
-        $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
-        );
-        $data = array(
-            'data' =>    $this->m_barang->tampil_kamera()
-        );
-
-        $this->load->view('shared/frontheader', $title);
-        $this->load->view('front/kamera_view', $data);
-    }
 
     function overview()
     {
         $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+            'title' => 'EKA Toko - Ponjong'
         );
         $data = array(
             'data' =>    $this->m_barang->tampil_overview()
@@ -80,5 +55,31 @@ class Home extends CI_Controller
 
         $this->load->view('shared/frontheader', $title);
         $this->load->view('front/overview_view', $data);
+    }
+
+    function makanan()
+    {
+        $title = array(
+            'title' => 'EKA Toko - Ponjong'
+        );
+        $data = array(
+            'data' =>    $this->m_barang->tampil_makanan()
+        );
+
+        $this->load->view('shared/frontheader', $title);
+        $this->load->view('front/makanan_view', $data);
+    }
+
+    function minuman()
+    {
+        $title = array(
+            'title' => 'EKA Toko - Ponjong'
+        );
+        $data = array(
+            'data' =>    $this->m_barang->tampil_minuman()
+        );
+
+        $this->load->view('shared/frontheader', $title);
+        $this->load->view('front/minuman_view', $data);
     }
 }

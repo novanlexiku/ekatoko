@@ -79,12 +79,12 @@ class M_barang extends CI_Model
 		$hsl = $this->db->query("SELECT barang_id,barang_gambar,barang_nama,barang_deskripsi,barang_satuan,barang_harpok,barang_harjul,barang_harjul_grosir,barang_stok,barang_min_stok,barang_promo, barang_kategori_id,kategori_nama FROM tbl_barang JOIN tbl_kategori ON barang_kategori_id=kategori_id WHERE barang_promo=1");
 		return $hsl;
 	}
-	function tampil_aksesoris()
+	function tampil_makanan()
 	{
 		$hsl = $this->db->query("SELECT barang_id,barang_gambar,barang_nama,barang_deskripsi,barang_satuan,barang_harpok,barang_harjul,barang_harjul_grosir,barang_stok,barang_min_stok,barang_promo, barang_kategori_id,kategori_nama FROM tbl_barang JOIN tbl_kategori ON barang_kategori_id=kategori_id WHERE barang_kategori_id=1");
 		return $hsl;
 	}
-	function tampil_kamera()
+	function tampil_minuman()
 	{
 		$hsl = $this->db->query("SELECT barang_id,barang_gambar,barang_nama,barang_deskripsi,barang_satuan,barang_harpok,barang_harjul,barang_harjul_grosir,barang_stok,barang_min_stok,barang_promo, barang_kategori_id,kategori_nama FROM tbl_barang JOIN tbl_kategori ON barang_kategori_id=kategori_id WHERE barang_kategori_id=2");
 		return $hsl;

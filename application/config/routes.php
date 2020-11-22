@@ -63,12 +63,14 @@ $route['pengiriman'] = 'admin/pengiriman';
 $route['promo'] = 'admin/hotdeals';
 $route['laporan'] = 'admin/laporan';
 
+$route['makanan'] = 'home/makanan';
+$route['minuman'] = 'home/minuman';
 $route['overview'] = 'home/overview';
 $route['pemesanan_pelanggan'] = 'cart/pemesanan';
 $route['register'] = 'Register';
 $route['login'] = 'login';
 $route['logout'] = 'login/logout';
 
-$route['default_controller'] = 'login';
+$route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

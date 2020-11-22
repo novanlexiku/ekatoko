@@ -52,7 +52,7 @@ class Login extends MY_Controller
 
 
         $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+            'title' => 'EKA Toko - Ponjong'
         );
 
 

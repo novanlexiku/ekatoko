@@ -13,7 +13,7 @@ class Cart extends CI_Controller
     {
         $data['data'] = $this->M_cart->get_all_barang();
         $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+            'title' => 'EKA Toko - Ponjong'
         );
 
 
@@ -79,7 +79,7 @@ class Cart extends CI_Controller
             $data['data'] = $this->M_cart->get_all_barang();
             $data['bank'] = $this->M_cart->get_all_bank();
             $title = array(
-                'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+                'title' => 'EKA Toko - Ponjong'
             );
 
             $this->load->view('shared/frontheader', $title);

@@ -30,7 +30,7 @@ class Register extends CI_Controller
     public function index()
     {
         $title = array(
-            'title' => 'jogjaCam Pusatnya Aksesoris Kamera'
+            'title' => 'EKA Toko - Ponjong'
         );
 
 
