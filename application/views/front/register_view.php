@@ -20,26 +20,28 @@
     <!-- Page content -->
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-5 col-md-7">
+            <div class="col-lg-10 col-md-10">
                 <div class="card bg-secondary border-0 mb-0">
 
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="mt-1">
                             <?php
                             $msg = $this->session->flashdata('msg');
-                            if ($msg == "usernamesalah") {
+                            if ($msg == "tambahpengguna") {
                             ?>
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    <span class="alert-text"><strong>Peringatan!</strong> username atau password yang kamu masukkan salah!</span>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                    <span class="alert-text"><strong>Sukses!</strong> kamu telah terdaftar, silahkan login!</span>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                             <?php
-                            } elseif ($msg == "passwordsalah") {
+                            } elseif ($msg == "passwordtidaksama") {
                             ?>
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    <span class="alert-text"><strong>Peringatan!</strong> username atau password yang kamu masukkan salah!</span>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                    <span class="alert-text"><strong>Peringatan!</strong> Data Tidak Valid!</span>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -49,35 +51,66 @@
                             ?>
                         </div>
                         <div class="text-center text-muted mb-4">
-                            <small>Login menggunakan username dan password</small>
+                            <small>Daftar pengguna baru</small>
                         </div>
-                        <form method="post" action="<?php echo base_url() . 'index.php/login' ?>">
-                            <div class="form-group mb-3">
-                                <div class="input-group input-group-merge input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                        <form method="post" action="<?php echo base_url() . 'index.php/register/register_pengguna' ?>">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label text-dark" for="nama">Nama <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                            </div>
+                                            <input name="nama" id="nama" class="form-control" type="text" placeholder="Nama" required>
+                                        </div>
                                     </div>
-                                    <input name="user_username" id="userName" class="form-control" type="text" placeholder="Username" required>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-merge input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label text-dark" for="userName">Username <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                            </div>
+                                            <input name="username" id="userName" class="form-control" type="text" placeholder="Username" required>
+                                        </div>
                                     </div>
-                                    <input name="user_password" id="Password" class="form-control" type="password" placeholder="Password" required>
                                 </div>
-                            </div>
-
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">Masuk</button>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label text-dark" for="Password">Password <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                            </div>
+                                            <input name="password" id="Password" class="form-control" type="password" placeholder="Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label text-dark" for="Password2">Ulangi Password<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                            </div>
+                                            <input name="password2" id="Password2" class="form-control" type="password" placeholder="Ulangi Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2">
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-secondary mt-4 animate-up-2"><span class="mr-2"><i class="fas fa-paper-plane"></i></span>Daftar</button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <a href="register" class="text-gray"><small>Buat Akun Baru</small></a>
+                        <a href="login" class="text-gray"><small>Sudah punya akun</small></a>
                     </div>
                 </div>
             </div>

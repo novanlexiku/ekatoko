@@ -9,41 +9,38 @@
         </div>
     </div>
     <!-- Page content -->
-    <div class="container mt--8 pb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12">
-                <div class="card-deck">
-                    <?php
-                    foreach ($data->result_array() as $a) :
-                        $id = $a['barang_id'];
-                        $gbr = $a['barang_gambar'];
-                        $nm = $a['barang_nama'];
-                        $desc = html_entity_decode($a['barang_deskripsi']);
-                        $satuan = $a['barang_satuan'];
-                        $harpok = $a['barang_harpok'];
-                        $harjul = $a['barang_harjul'];
-                        $harjul_grosir = $a['barang_harjul_grosir'];
-                        $stok = $a['barang_stok'];
-                        $min_stok = $a['barang_min_stok'];
-                        $kat_id = $a['barang_kategori_id'];
-                        $kat_nama = $a['kategori_nama'];
-                    ?>
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="<?php echo base_url() . 'assets/upload/images/barang/' . $gbr; ?>" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $nm; ?></h5>
-                                <p class="card-text">Barang ini tersisa : <span class="badge badge-primary"><?php echo $stok; ?> Item</span></p>
-                                <p class="card-text"><small class="text-muted"><?php echo 'Rp ' . number_format($harjul); ?></small></p>
-                                <button type="button" data-toggle="modal" data-target="#modalDetail<?php echo $id ?>" class="btn btn-block btn-outline-info animate-up-2 ">
-                                    Detail <span class="icon icon-xs"></i></span>
-                                </button>
-                            </div>
+    <div class="container mt--8">
+        <div class="row">
+            <?php
+            foreach ($data->result_array() as $a) :
+                $id = $a['barang_id'];
+                $gbr = $a['barang_gambar'];
+                $nm = $a['barang_nama'];
+                $desc = html_entity_decode($a['barang_deskripsi']);
+                $satuan = $a['barang_satuan'];
+                $harpok = $a['barang_harpok'];
+                $harjul = $a['barang_harjul'];
+                $harjul_grosir = $a['barang_harjul_grosir'];
+                $stok = $a['barang_stok'];
+                $min_stok = $a['barang_min_stok'];
+                $kat_id = $a['barang_kategori_id'];
+                $kat_nama = $a['kategori_nama'];
+            ?>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<?php echo base_url() . 'assets/upload/images/barang/' . $gbr; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $nm; ?></h5>
+                            <p class="card-text">Barang ini tersisa : <span class="badge badge-primary"><?php echo $stok; ?> Item</span></p>
+                            <p class="card-text"><small class="text-muted"><?php echo 'Rp ' . number_format($harjul); ?></small></p>
+                            <button type="button" data-toggle="modal" data-target="#modalDetail<?php echo $id ?>" class="btn btn-block btn-outline-info animate-up-2 ">
+                                Detail <span class="icon icon-xs"></i></span>
+                            </button>
                         </div>
-
-                    <?php endforeach; ?>
-
+                    </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
+
         </div>
     </div>
     <!-- End Content -->
