@@ -57,7 +57,7 @@
                 </div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">
+                        <a href="<?php echo base_url() ?>overview" class="nav-link">
                             <span class="nav-link-inner--text">Overview</span>
                         </a>
                     </li>
