@@ -34,7 +34,7 @@
     <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="<?php echo base_url() ?>">
-                <img src="<?php echo base_url() ?>/assets/img/brand/white.png">
+                <img src="<?php echo base_url() ?>/assets/img/brand/white.svg">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,8 +43,8 @@
                 <div class="navbar-collapse-header">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                            <a href="dashboard.html">
-                                <img src="<?php echo base_url() ?>/assets/img/brand/blue.png">
+                            <a href="<?php echo base_url() ?>">
+                                <img src="<?php echo base_url() ?>/assets/img/brand/logo.svg">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">

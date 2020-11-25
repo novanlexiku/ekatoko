@@ -48,7 +48,7 @@
             <!-- Brand -->
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="<?php echo base_url() ?>/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <img src="<?php echo base_url() ?>/assets/img/brand/logo.svg" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
